@@ -20,6 +20,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', include('MainPage.urls')), # 주소 뒤에 아무것도 없으면 MainPage.urls로 이동
+    path('', include('MainPages.urls')), # 주소 뒤에 아무것도 없으면 MainPage.urls로 이동
 
 ]

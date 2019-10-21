@@ -1,11 +1,70 @@
-{% extends 'basecamp/base_full.html' %} {% load static %}
-{% block title %}우정헌닷컴 - About Me{% endblock %}
+<!DOCTYPE html>
+{% load static %}
 
-{% block description %}
-    <meta name="description" content="우정헌닷컴 개발자 소개 사이트입니다."> {% endblock %}
+<html lang="ko">
 
-{% block content %}
-<div class="container">
+<head>
+    <meta charset="UTF-8">
+    <title>우정헌 - About Me</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'blog/_assets/css/custom.min.css' %}">
+</head>
+
+<body>
+
+    <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="navbar">
+    <div class="container">
+        <a href="/" class="navbar-brand">우정헌닷컴</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about_me/">About me</a>
+                </li>
+            </ul>
+
+           
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Please Log in</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+              
+                    <div class="col-md-6">
+                        <a role="button" class="btn btn-outline-info" href="/accounts/signup/"><i class="far fa-envelope"></i>  Sign Up with Email</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+	
+	<div class="container">
     <div class="row">
         <div class="col-md-9">
             <h1 class="my-3">About Me</h1>
@@ -19,9 +78,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-30">
-            <img width="100px" class="img-fluid" src="{% static 'basecamp/images/email_blue.png' %}" />
-        </div>
+  
         <div class="col-md">
             <h1 class="my-3">Contact me</h1>
             <h5>E-mail:
@@ -30,4 +87,20 @@
         </div>
     </div>
 </div>
-{% endblock %}
+
+	SmartWork_V0/SmartWork_practice/basecamp/static/blog/_assets/js/jquery.min.js
+	
+<script src="{% static 'blog/_assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'blog/_assets/js/popper.min.js' %}"></script>
+<script src="{% static 'blog/bootstrap/bootstrap.min.js' %}"></script>
+<script src="{% static 'blog/_assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
