@@ -19,6 +19,7 @@ from . import views
 urlpatterns = [
     path('about_me/', views.about_me),
 	path('test/', views.test),
+	path('test2/', views.test2),
     path('', views.index),
     # path('robots.txt/', views.robots),
 
