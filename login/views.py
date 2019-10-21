@@ -6,3 +6,9 @@ def sign_in(request):
         request,
         'sign_in.html'
     )
+
+def sign_up(request):
+    return render(
+        request,
+        'sign_up.html'
+    )
