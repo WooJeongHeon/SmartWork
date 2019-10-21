@@ -1,0 +1,33 @@
+{% extends 'basecamp/base_full.html' %} {% load static %}
+{% block title %}우정헌닷컴 - About Me{% endblock %}
+
+{% block description %}
+    <meta name="description" content="우정헌닷컴 개발자 소개 사이트입니다."> {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 class="my-3">About Me</h1>
+            <h3 class="my-3">안녕하세요. 개발자 우정헌 입니다. </h3>
+
+            <h5 class="my-2">현재 웹 사이트 개발중입니다. </h5>
+            <p>현재 테스트 서버 운영중으로 접속에 제한이 되거나 오류가 발생할 수 있습니다. 양해 부탁드립니다~!!</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-30">
+            <img width="100px" class="img-fluid" src="{% static 'basecamp/images/email_blue.png' %}" />
+        </div>
+        <div class="col-md">
+            <h1 class="my-3">Contact me</h1>
+            <h5>E-mail:
+                <small>admin@woojeongheon.com</small>
+            </h5>
+        </div>
+    </div>
+</div>
+{% endblock %}
