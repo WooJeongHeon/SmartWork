@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', include('MainPages.urls')), # 주소 뒤에 아무것도 없으면 MainPage.urls로 이동
+	path('msgboards/', include('MessageBoards.urls')), # 주소 뒤에 msgboards/가 오면 msgboards.urls로 이동
     path('login/', include('login.urls')), # 주소 뒤에 아무것도 없으면 MainPage.urls로 이동
 	path('admin/', admin.site.urls),
 	path('markdownx/', include('markdownx.urls')), # markdownx 모듈 사용했음

@@ -14,7 +14,7 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return '/blog/category/{}/'.format(self.slug)
+        return '/msgboards/category/{}/'.format(self.slug)
 
     class Meta:
         verbose_name_plural = 'categories'
@@ -28,7 +28,7 @@ class Tag(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return '/blog/tag/{}/'.format(self.slug)
+        return '/msgboards/tag/{}/'.format(self.slug)
 
 
 class Post(models.Model):
@@ -53,7 +53,7 @@ class Post(models.Model):
         return '{} :: {}'.format(self.title, self.author) # 제목 미리보기 형식
 
     def get_absolute_url(self): # admin 페이지의 VIEW ON SITE 정의
-        return '/blog/{}/'.format(self.pk)
+        return '/msgboards/{}/'.format(self.pk)
     
     def get_update_url(self):
         return self.get_absolute_url() + 'update/'
