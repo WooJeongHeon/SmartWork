@@ -1,1 +1,0 @@
-# SmartWork_practice
