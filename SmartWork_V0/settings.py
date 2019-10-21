@@ -45,7 +45,8 @@ INSTALLED_APPS = [
 	'basecamp',
 	'MainPages',
     'login',
-	'MessageBoards'
+	'MessageBoards',
+	'AdminPages'
 
 ]
 
