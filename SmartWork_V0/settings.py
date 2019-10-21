@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	
-	    'markdownx', # markdownx 모듈 사용했음 (pip3 install django-markdownx)
+	'markdownx',
+	'crispy_forms',
 
 	
 	'basecamp',

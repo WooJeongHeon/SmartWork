@@ -19,12 +19,9 @@
     <div class="container">
 
         <div class="row">
-            <!-- Blog Entries Column -->
-            <div class="col-md-8" id="main-div">
-                {% block content %} {% endblock %}
-            </div>
 
             <div class="col-md-4" id="side-div">
+
                 <!-- Search Widget -->
                 <div class="card my-4">
                     <h5 class="card-header">Search</h5>
@@ -58,7 +55,14 @@
                         </div>
                     </div>
                 </div>
+
             </div>
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8" id="main-div">
+                {% block content %} {% endblock %}
+            </div>
+
         </div>
     </div>
 
@@ -75,10 +79,10 @@
         }
     </script>
 
-<script src="{% static 'BootsWatch/Litera/_assets/js/jquery.min.js' %}"></script>
-<script src="{% static 'BootsWatch/Litera/_assets/js/popper.min.js' %}"></script>
-<script src="{% static 'BootsWatch/Litera/bootstrap/bootstrap.min.js' %}"></script>
-<script src="{% static 'BootsWatch/Litera/_assets/js/custom.js' %}"></script>
+    <script src="{% static 'BootsWatch/Litera/_assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'BootsWatch/Litera/_assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'BootsWatch/Litera/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'BootsWatch/Litera/_assets/js/custom.js' %}"></script>
 
 </body>
 
