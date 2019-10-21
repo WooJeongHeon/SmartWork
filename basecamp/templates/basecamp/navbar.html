@@ -1,0 +1,61 @@
+<div class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="navbar">
+    <div class="container">
+        <a href="/" class="navbar-brand">스마트 업무처리 시스템</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">부대 관리</a>
+                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 48px, 0px);">
+                        <a class="dropdown-item" href="#">휴가 관리</a>
+                        <a class="dropdown-item" href="#">부대 운영일지</a>
+                        <a class="dropdown-item" href="#">근무 관리</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">더보기</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">부대 업무</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">편의 기능</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SNS</a>
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="download">{{ user }}
+                        <span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="download">
+                        {#
+                        <a class="dropdown-item" href="https://jsfiddle.net/bootswatch/3he50zsf/">Open in JSFiddle</a>#} {#
+                        <div class="dropdown-divider"></div>#} {#
+                        <a class="dropdown-item" href="../4/simplex/bootstrap.min.css">bootstrap.min.css</a>#} {#
+                        <a class="dropdown-item" href="../4/simplex/bootstrap.css">bootstrap.css</a>#} {#
+                        <div class="dropdown-divider"></div>#} {#
+                        <a class="dropdown-item" href="../4/simplex/_variables.scss">_variables.scss</a>#}
+                        <a class="dropdown-item" href="/accounts/logout/">Log out</a>
+                    </div>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+                        Log in
+                    </button>
+                </li>
+                {% endif %}
+            </ul>
+
+        </div>
+    </div>
+</div>
