@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Post, Category, Tag, Comment # 현재 경로에서 models 에서 Post, Category, Tag, Comment를 import
+from AdminPages.models import MsgBoards
+from MessageBoards.models import Category
 from .forms import CommentForm
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -59,9 +61,16 @@ class PostCreate(LoginRequiredMixin, CreateView): # LoginRequiredMixin: 로그�
         current_user = self.request.user # 현재 user을 current_user로 담음
         if current_user.is_authenticated: # 로그인 되어있을때
             form.instance.author = current_user
+            # form.instance.category = Category.objects.filter(category=None)
             return super(type(self), self).form_valid(form)
         else: # 로그인 하지 않은 user가 /msgboards/create/ 링크타고 올수 있으니까 예외 처리, 이렇게 들어와서 글쓰기 누르면 에러뜸.
             return redirect('/')
+	
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(type(self), self).get_context_data(**kwargs)
+        context['category_list'] = Category.objects.all()
+        context['posts_without_category'] = Post.objects.filter(category=None).count()
+        return context
     
     
 class PostUpdate(UpdateView):
@@ -115,7 +124,7 @@ class PostListByCategory(ListView):
             category = Category.objects.get(slug=slug)
             context['category'] = category # post_list.html에 category로 넘겨줌.
 
-        # context['title'] = 'Blog - {}'.format(category.name)
+        # context['title'] = '게시판 - {}'.format(category.name)
         return context
     
 
@@ -133,7 +142,7 @@ def new_comment(request, pk):
             comment.save() #3개 다 채웠으니까 이제 저장.
             return redirect(comment.get_absolute_url())
     else:
-        return redirect('/blog/')
+        return redirect('/msgboards/')
     
 
 class CommentUpdate(UpdateView):
@@ -145,6 +154,12 @@ class CommentUpdate(UpdateView):
         if comment.author != self.request.user: # 댓글 작성자와 현재 로그인 자가 같지 않은 경우.
             raise PermissionError('Comment 수정 권한이 없습니다.') # 에러를 발생.
         return comment
+	
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(type(self), self).get_context_data(**kwargs)
+        context['category_list'] = Category.objects.all()
+        context['posts_without_category'] = Post.objects.filter(category=None).count()
+        return context
     
     
 def delete_comment(request, pk):
