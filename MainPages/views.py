@@ -26,6 +26,17 @@ def about_me(request):
 		context
 	)
 
+def schedule(request):
+	msgboards = MsgBoards.objects.all()
+	context = {'msgboards':msgboards}
+	context['category_list'] = Category.objects.all()
+
+	return render(
+		request,
+		'schedule.html',
+		context
+	)
+
 
 
 # def robots(request):
