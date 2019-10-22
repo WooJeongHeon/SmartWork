@@ -1,17 +1,27 @@
 from django.shortcuts import render, redirect
+from AdminPages.models import MsgBoards
+
 
 
 def sign_in(request):
-    return render(
-        request,
-        'sign_in.html'
-    )
+	msgboards = MsgBoards.objects.all()
+	context = {'msgboards':msgboards}
+	return render(
+		request,
+		'sign_in.html',
+		context
+	)
 
 def sign_up(request):
-    return render(
-        request,
-        'sign_up.html'
-    )
+	msgboards = MsgBoards.objects.all()
+	context = {'msgboards':msgboards}
+	return render(
+		request,
+		'sign_up.html',
+		context
+	)
+
+
 # =============================================== 밑에는 네이버 참고 복붙
 
 from django.shortcuts import render, redirect, HttpResponse

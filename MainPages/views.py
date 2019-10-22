@@ -1,30 +1,27 @@
 from django.shortcuts import render, redirect
+from AdminPages.models import MsgBoards
 
 
 def index(request):
-    return render(
-        request,
-        'main_site.html'
-    )
+	msgboards = MsgBoards.objects.all()
+	context = {'msgboards':msgboards}
+	return render(
+		request,
+		'main_site.html',
+		context
+	)
 
 
 def about_me(request):
-    return render(
-        request,
-        'about_me.html'
-    )
+	msgboards = MsgBoards.objects.all()
+	context = {'msgboards':msgboards}
+	return render(
+		request,
+		'about_me.html',
+		context
+	)
 
-def test(request):
-    return render(
-        request,
-        'test.html'
-    )
 
-def test2(request):
-    return render(
-        request,
-        'test2.html'
-    )
 
 # def robots(request):
 #     return render(

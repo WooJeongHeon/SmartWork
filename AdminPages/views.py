@@ -3,9 +3,12 @@ from .models import MsgBoards
 from django.views.generic import ListView
 
 def index(request):
+    msgboards = MsgBoards.objects.all()
+    context = {'msgboards':msgboards}
     return render(
         request,
-        'admin_index.html'
+        'admin_index.html',
+	    context
     )
 
 def msgboards(request):
@@ -14,7 +17,7 @@ def msgboards(request):
 	return render(
         request,
         'msgboards.html',
-		context
+	    context
     )
 
 
