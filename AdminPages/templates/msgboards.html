@@ -1,1 +1,12 @@
-test
+{% extends 'basecamp/base_full.html' %} {% load static %} {% block title %}Smart Work - 관리자 페이지{% endblock %} {% block content %}
+
+    <div class="form-group">
+      <label for="exampleTextarea">게시판 추가하기</label>
+      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+
+        <span class="badge badge-info float-right">{{ p.category }}</span>
+<span class="badge badge-primary">{{ p.category_list }}</span>
+
+
+{% endblock %}
