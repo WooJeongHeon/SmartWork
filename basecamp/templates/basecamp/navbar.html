@@ -37,11 +37,11 @@
                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 48px, 0px);">
 
                         {% for category in category_list %}
-                        <a class="dropdown-item" href="/msgboards/category/{{ category.name }}/">{{ category.name }}</a>
+                        <a class="dropdown-item" href="{{ category.get_absolute_url }}/">{{ category.name }}</a>
                         {% endfor %}
 
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">더보기</a>
+                        <a class="dropdown-item" href="/msgboards/">전체보기</a>
                         <a class="dropdown-item" href="#">공지사항</a>
                         <a class="dropdown-item" href="#">감사나눔 1·2·3 운동</a>
                         <a class="dropdown-item" href="#">1·1·30·30 캠페인</a>
@@ -78,7 +78,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin">관리자 페이지</a>
+                    <a class="nav-link" href="/admin/admin_tools/">관리자 페이지</a>
                 </li>
 
                 <li class="nav-item">

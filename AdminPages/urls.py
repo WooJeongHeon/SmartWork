@@ -21,6 +21,7 @@ urlpatterns = [
 	path('super/', admin.site.urls),
 	path('', views.index),
     path('msgboards/', views.msgboards),
+    path('admin_tools/', views.admin_tools),
 
 
 

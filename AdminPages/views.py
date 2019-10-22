@@ -24,3 +24,14 @@ def msgboards(request):
         'msgboards.html',
 	    context
     )
+
+def admin_tools(request):
+	msgboards = MsgBoards.objects.all()
+	context = {'msgboards':msgboards}
+	context['category_list'] = Category.objects.all()
+
+	return render(
+        request,
+        'admin_tools.html',
+	    context
+    )
