@@ -1,0 +1,213 @@
+{% extends 'basecamp/base_full.html' %} {% load static %} {% block title %}Smart Work - 관리자 페이지{% endblock %} {% block content %}
+
+<div id="wrapper">
+
+    <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">관리자 페이지</a>
+                </li>
+                <li class="breadcrumb-item active">출타자 관리</li>
+            </ol>
+        {% include './base_menu.html' %}
+
+
+
+
+            <!-- DataTables Example -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    상세 출타 인원</div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>계급</th>
+                                    <th>이름</th>
+                                    <th>휴가일수</th>
+                                    <th>휴가 기간</th>
+
+                                    <th>출타종류</th>
+                                    <th>행선지</th>
+                                    <th>휴가허용</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>계급</th>
+                                    <th>이름</th>
+                                    <th>휴가일수</th>
+                                    <th>휴가 기간</th>
+
+                                    <th>출타종류</th>
+                                    <th>행선지</th>
+                                    <th>휴가허용</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>10</td>
+                                    <td>2019.10.22 ~ 2019.10.31</td>
+
+                                    <td>포상휴가</td>
+                                    <td>집</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>5</td>
+                                    <td>2019.10.21 ~ 2019.10.25</td>
+
+                                    <td>파견</td>
+                                    <td>경기도 시흥 대교 HRD센터</td>
+                                    <td>O</td>
+                                </tr>
+
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>10</td>
+                                    <td>2019.10.22 ~ 2019.10.31</td>
+
+                                    <td>포상휴가</td>
+                                    <td>집</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>5</td>
+                                    <td>2019.10.21 ~ 2019.10.25</td>
+
+                                    <td>파견</td>
+                                    <td>경기도 시흥 대교 HRD센터</td>
+                                    <td>O</td>
+                                </tr>
+
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>10</td>
+                                    <td>2019.10.22 ~ 2019.10.31</td>
+
+                                    <td>포상휴가</td>
+                                    <td>집</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>5</td>
+                                    <td>2019.10.21 ~ 2019.10.25</td>
+
+                                    <td>파견</td>
+                                    <td>경기도 시흥 대교 HRD센터</td>
+                                    <td>O</td>
+                                </tr>
+
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>10</td>
+                                    <td>2019.10.22 ~ 2019.10.31</td>
+
+                                    <td>포상휴가</td>
+                                    <td>집</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>5</td>
+                                    <td>2019.10.21 ~ 2019.10.25</td>
+
+                                    <td>파견</td>
+                                    <td>경기도 시흥 대교 HRD센터</td>
+                                    <td>O</td>
+                                </tr>
+
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>10</td>
+                                    <td>2019.10.22 ~ 2019.10.31</td>
+
+                                    <td>포상휴가</td>
+                                    <td>집</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>5</td>
+                                    <td>2019.10.21 ~ 2019.10.25</td>
+
+                                    <td>파견</td>
+                                    <td>경기도 시흥 대교 HRD센터</td>
+                                    <td>O</td>
+                                </tr>
+
+                                <tr>
+                                    <td>상병</td>
+                                    <td>우정헌</td>
+                                    <td>10</td>
+                                    <td>2019.10.22 ~ 2019.10.31</td>
+
+                                    <td>포상휴가</td>
+                                    <td>집</td>
+                                    <td>O</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
+
+ 
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Footer -->
+        {% include 'basecamp/footer.html' %}
+
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<script src="{% static 'BootsWatch/Litera/_assets/js/jquery.min.js' %}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{% static 'bootstrap/admin_tools/jquery.easing.min.js' %}"></script>
+
+<!-- Page level plugin JavaScript-->
+<script src="{% static 'bootstrap/admin_tools/Chart.min.js' %}"></script>
+
+<script src="{% static 'bootstrap/admin_tools/jquery.dataTables.js' %}"></script>
+
+<script src="{% static 'bootstrap/admin_tools/dataTables.bootstrap4.js' %}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{% static 'bootstrap/admin_tools/sb-admin.min.js' %}"></script>
+
+<!-- Demo scripts for this page-->
+<script src="{% static 'bootstrap/admin_tools/datatables-demo.js' %}"></script>
+<script src="{% static 'bootstrap/admin_tools/chart-area-demo.js' %}"></script>
+{% endblock %}

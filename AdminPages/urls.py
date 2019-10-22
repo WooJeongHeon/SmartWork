@@ -19,9 +19,11 @@ from . import views
 
 urlpatterns = [
 	path('super/', admin.site.urls),
-	path('', views.index),
-    path('msgboards/', views.msgboards),
+	path('', views.admin_tools),
+    path('headcount/', views.headcount),
     path('admin_tools/', views.admin_tools),
+    path('custom_site/', views.custom_site),
+
 
 
 
