@@ -22,8 +22,7 @@
         {% for p in msgboards %}
 
         <tr class="table-active">
-            <th scope="row">게시판</th>
-
+            <th scope="row">{{ p.order }}</th>
             <td>{{ p.name }}</td>
             <td>{{ p.description }}</td>
             <td>
