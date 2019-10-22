@@ -21,12 +21,11 @@ var myLineChart = new Chart(ctx, {
             '10월 31일',
             '11월 1일',
             '11월 2일',
-            '11월 3일',
-
+            '11월 3일'
         ],
         datasets: [
             {
-                label: 'Sessions',
+                label: '출타 인원',
                 lineTension: 0.3,
                 backgroundColor: 'rgba(2,117,216,0.2)',
                 borderColor: 'rgba(2,117,216,1)',
@@ -37,21 +36,7 @@ var myLineChart = new Chart(ctx, {
                 pointHoverBackgroundColor: 'rgba(2,117,216,1)',
                 pointHitRadius: 50,
                 pointBorderWidth: 2,
-                data: [
-                    5,
-                    4,
-                    4,
-                    3,
-                    2,
-                    4,
-                    5,
-                    5,
-                    6,
-                    4,
-                    3,
-                    3,
-                    2
-                ]
+                data: [5, 4, 4, 3, 2, 4, 5, 5, 6, 4, 3, 3, 2]
             }
         ]
     },
