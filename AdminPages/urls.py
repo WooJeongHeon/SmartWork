@@ -21,6 +21,8 @@ urlpatterns = [
 	path('super/', admin.site.urls),
 	path('', views.index),
     path('msgboards/', views.msgboards),
+	    # path('msgboards/', views.PostList.as_view()), # 주소 뒤에 아무것도 안오면views.PostList로 가라
+
 
 
 
