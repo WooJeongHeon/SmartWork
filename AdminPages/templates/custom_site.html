@@ -27,12 +27,17 @@
                                     <th>게시판 제목</th>
                                     <th>설명</th>
 
+                                    <th>수정</th>
+
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
                                     <th>게시판 제목</th>
                                     <th>설명</th>
+
+                                    <th>수정</th>
+
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -41,6 +46,11 @@
                                 <tr>
                                     <td>{{ category.name }}</td>
                                     <td>{{ category.description }}</td>
+                                    <th>
+
+                                        <a class="btn btn-outline-warning" href="/admin/super/MessageBoards/category/" role="button">수정하기</a>
+
+                                    </th>
 
                                 </tr>
                                 {% endfor %}
@@ -49,8 +59,10 @@
                         </table>
                     </div>
                 </div>
+                <a class="btn btn-outline-secondary" href="/admin/super/MessageBoards/category/" role="button">+ 추가하기</a>
                 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
             </div>
+                 
 
         </div>
         <!-- /.container-fluid -->
