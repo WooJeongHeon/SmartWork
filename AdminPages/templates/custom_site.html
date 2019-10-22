@@ -8,164 +8,42 @@
 
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="#">관리자 페이지</a>
-                </li>
-                <li class="breadcrumb-item active">출타자 관리</li>
+                <li class="breadcrumb-item active">관리자 페이지</li>
+
+                <li class="breadcrumb-item active">사이트 커스텀</li>
             </ol>
-        {% include './base_menu.html' %}
-
-
-
+            {% include './base_menu.html' %}
 
             <!-- DataTables Example -->
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table"></i>
-                    상세 출타 인원</div>
+                    부대활동 커스텀</div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>계급</th>
-                                    <th>이름</th>
-                                    <th>휴가일수</th>
-                                    <th>휴가 기간</th>
+                                    <th>게시판 제목</th>
+                                    <th>설명</th>
 
-                                    <th>출타종류</th>
-                                    <th>행선지</th>
-                                    <th>휴가허용</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                    <th>계급</th>
-                                    <th>이름</th>
-                                    <th>휴가일수</th>
-                                    <th>휴가 기간</th>
-
-                                    <th>출타종류</th>
-                                    <th>행선지</th>
-                                    <th>휴가허용</th>
+                                    <th>게시판 제목</th>
+                                    <th>설명</th>
                                 </tr>
                             </tfoot>
                             <tbody>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>5</td>
-                                    <td>2019.10.21 ~ 2019.10.25</td>
-
-                                    <td>파견</td>
-                                    <td>경기도 시흥 대교 HRD센터</td>
-                                    <td>O</td>
-                                </tr>
+                                {% for category in category_list %}
 
                                 <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
+                                    <td>{{ category.name }}</td>
+                                    <td>{{ category.description }}</td>
 
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
                                 </tr>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>5</td>
-                                    <td>2019.10.21 ~ 2019.10.25</td>
-
-                                    <td>파견</td>
-                                    <td>경기도 시흥 대교 HRD센터</td>
-                                    <td>O</td>
-                                </tr>
-
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>5</td>
-                                    <td>2019.10.21 ~ 2019.10.25</td>
-
-                                    <td>파견</td>
-                                    <td>경기도 시흥 대교 HRD센터</td>
-                                    <td>O</td>
-                                </tr>
-
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>5</td>
-                                    <td>2019.10.21 ~ 2019.10.25</td>
-
-                                    <td>파견</td>
-                                    <td>경기도 시흥 대교 HRD센터</td>
-                                    <td>O</td>
-                                </tr>
-
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>5</td>
-                                    <td>2019.10.21 ~ 2019.10.25</td>
-
-                                    <td>파견</td>
-                                    <td>경기도 시흥 대교 HRD센터</td>
-                                    <td>O</td>
-                                </tr>
-
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
+                                {% endfor %}
 
                             </tbody>
                         </table>
@@ -174,7 +52,6 @@
                 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
             </div>
 
- 
         </div>
         <!-- /.container-fluid -->
 
