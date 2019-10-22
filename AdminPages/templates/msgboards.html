@@ -5,10 +5,33 @@
     <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
 </div>
 
-{% if msgboards %}
-<span class="badge badge-info float-right">{{ msgboards }}</span>
-{% else %}
-<span class="badge badge-pill badge-light float-right">미분류</span>
-{% endif %}
+<div class="m-5">
 
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Type</th>
+            <th scope="col">이름</th>
+            <th scope="col">설명</th>
+            <th scope="col">수정/삭제</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in msgboards %}
+
+        <tr class="table-active">
+            <th scope="row">게시판</th>
+
+            <td>{{ p.name }}</td>
+            <td>{{ p.description }}</td>
+            <td>
+                <button type="button" class="btn btn-link">수정하기</button>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
 {% endblock %}

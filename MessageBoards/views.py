@@ -60,7 +60,7 @@ class PostCreate(LoginRequiredMixin, CreateView): # LoginRequiredMixin: 로그�
         if current_user.is_authenticated: # 로그인 되어있을때
             form.instance.author = current_user
             return super(type(self), self).form_valid(form)
-        else: # 로그인 하지 않은 user가 https://maindomain.com/blog/create/ 링크타고 올수 있으니까 예외 처리, 이렇게 들어와서 글쓰기 누르면 에러뜸.
+        else: # 로그인 하지 않은 user가 /msgboards/create/ 링크타고 올수 있으니까 예외 처리, 이렇게 들어와서 글쓰기 누르면 에러뜸.
             return redirect('/')
     
     
