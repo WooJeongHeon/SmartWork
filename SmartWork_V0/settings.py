@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+	'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
 	
 	'markdownx',
 	'crispy_forms',
@@ -123,6 +129,28 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 1
+
+
+ACCOUNT_EMAIL_REQUIRED = True # 회원가입할때 사용자의 이메일은 필수사항 (django-allauth docs에 보면 나와있음.)
+ACCOUNT_EMAIL_VERIFICATION = 'none' # 처음 가입했을때 이메일 verification 안함, 이거 없애면 첫 로그인때 오류생겼음.(회원가입후 첫 자동로그인)
+LOGIN_REDIRECT_URL="/" # 옵션 값: 로그인 했을 경우, 로그인 페이지로 가는 경우를 막기 위해 첫 페이지로 리다이렉트
+
+
+
+
+
+
 
 
 # Static files (CSS, JavaScript, Images)

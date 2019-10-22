@@ -24,6 +24,8 @@ urlpatterns = [
     path('login/', include('login.urls')), # 주소 뒤에 아무것도 없으면 MainPage.urls로 이동
 	path('markdownx/', include('markdownx.urls')), # markdownx 모듈 사용했음
 	path('admin/', include('AdminPages.urls')),
+    path('accounts/', include('allauth.urls')), #django-allauth 모듈 사용했음
+
 
 
 
