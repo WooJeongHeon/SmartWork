@@ -40,7 +40,6 @@
                                     <th>이름</th>
                                     <th>휴가일수</th>
                                     <th>휴가 기간</th>
-
                                     <th>출타종류</th>
                                     <th>행선지</th>
                                     <th>출타계획서</th>
@@ -53,9 +52,9 @@
                                     <th>이름</th>
                                     <th>휴가일수</th>
                                     <th>휴가 기간</th>
-
                                     <th>출타종류</th>
                                     <th>행선지</th>
+                                    <th>출타계획서</th>
                                     <th>휴가 승인</th>
                                 </tr>
                             </tfoot>
@@ -71,9 +70,9 @@
                                     <td>{{ p.vacation_type }}</td>
                                     <td>{{ p.destination }}</td>
                                     <td>
-                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#VacationPlanModal">
-                                              출타계획서 열람
-                                            </button>
+                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#VacationPlanModal">
+                                            출타계획서 열람
+                                        </button>
                                     </td>
 
                                     <td>
@@ -82,124 +81,12 @@
                                 </tr>
 
                                 {% endfor %} {% else %}
-                                <td>-- 출타 인원이 없습니다 --</td>
+                                <tr>
+
+                                    <td>-- 출타 인원이 없습니다 --</td>
+                                </tr>
+
                                 {% endif %}
-
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>5</td>
-                                    <td>2019.10.21 ~ 2019.10.25</td>
-
-                                    <td>파견</td>
-                                    <td>경기도 시흥 대교 HRD센터</td>
-                                    <td>O</td>
-                                </tr>
-
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>5</td>
-                                    <td>2019.10.21 ~ 2019.10.25</td>
-
-                                    <td>파견</td>
-                                    <td>경기도 시흥 대교 HRD센터</td>
-                                    <td>O</td>
-                                </tr>
-
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>5</td>
-                                    <td>2019.10.21 ~ 2019.10.25</td>
-
-                                    <td>파견</td>
-                                    <td>경기도 시흥 대교 HRD센터</td>
-                                    <td>O</td>
-                                </tr>
-
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>5</td>
-                                    <td>2019.10.21 ~ 2019.10.25</td>
-
-                                    <td>파견</td>
-                                    <td>경기도 시흥 대교 HRD센터</td>
-                                    <td>O</td>
-                                </tr>
-
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>5</td>
-                                    <td>2019.10.21 ~ 2019.10.25</td>
-
-                                    <td>파견</td>
-                                    <td>경기도 시흥 대교 HRD센터</td>
-                                    <td>O</td>
-                                </tr>
-
-                                <tr>
-                                    <td>상병</td>
-                                    <td>우정헌</td>
-                                    <td>10</td>
-                                    <td>2019.10.22 ~ 2019.10.31</td>
-
-                                    <td>포상휴가</td>
-                                    <td>집</td>
-                                    <td>O</td>
-                                </tr>
 
                             </tbody>
                         </table>
@@ -255,9 +142,9 @@
                 </button>
             </div>
             <div class="modal-body">
-전인원 출타계획서를 열람할 권한이 없습니다. 지휘관 이상의 권한이 필요합니다.            </div>
+                전인원 출타계획서를 열람할 권한이 없습니다. 지휘관 이상의 권한이 필요합니다. </div>
             <div class="modal-footer">
-				        <a href="/vacation" class="btn btn-primary">내 출타 보기</a>
+                <a href="/vacation" class="btn btn-primary">내 출타 보기</a>
 
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
