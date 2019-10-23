@@ -1,7 +1,12 @@
 {% extends 'MessageBoards/base.html' %} {% block content %} {% if user.is_authenticated %}
 
 <button class="btn btn-primary btn float-right" onclick="location.href='/msgboards/create/'">휴가 신청하기</button>
-<button class="mr-1 btn btn-outline-warning btn float-right" onclick="location.href='/admin/admin_tools/'">휴가 관리자 페이지로 이동 >></button>
+<button class="mr-1 btn btn-outline-warning btn float-right" onclick="location.href='/admin/admin_tools/'">휴가 관리페이지 >></button>
+    {% else %}
+
+        <a href="/login/sign_in/" class="text-warning float-right">휴가신청 또는 휴가승인을 위해 로그인이 필요합니다.</a>
+
+
 {% endif %}
 
 <style>

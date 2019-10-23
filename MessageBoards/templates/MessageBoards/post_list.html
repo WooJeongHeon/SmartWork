@@ -35,7 +35,7 @@
 
     <div class="card-body">
         {% if category and category == p.category %} {% elif p.category %}
-        <span class="badge badge-info float-right">{{ p.category }}</span>
+        <span class="badge badge-success float-right">{{ p.category }}</span>
         {% else %}
         <span class="badge badge-pill badge-light float-right">미분류</span>
         {% endif %}
