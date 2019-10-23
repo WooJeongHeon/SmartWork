@@ -21,8 +21,6 @@
                     </div>
                 </li>
 
-          
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">부대 활동</a>
                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 48px, 0px);">
@@ -110,11 +108,12 @@
             </div>
 
             <div class="modal-body">
-                <input class="form-control mr-sm-2" type="text" placeholder="여기에 검색할 내용을 입력하세요.">
+
+                <input class="form-control mr-sm-2" type="text" id="search-input_in_nav" onkeyup="wait_for_enterkey_in_nav()" placeholder="여기에 검색할 내용을 입력하세요.">
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Search</button>
+                <button type="button" class="btn btn-primary" onclick="search_post_in_nav();">Search</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
 
@@ -122,3 +121,18 @@
 
     </div>
 </div>
+
+<script>
+    function search_post_in_nav() {
+        var search_value = document.getElementById('search-input_in_nav').value;
+        if (search_value != "") {
+            location.href = "/msgboards/search/" + search_value + "/";
+        }
+    }
+
+    function wait_for_enterkey_in_nav() {
+        if (window.event.keyCode == 13) {
+            search_post_in_nav();
+        }
+    }
+</script>
