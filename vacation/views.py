@@ -59,7 +59,7 @@ class VacationUpdate(UpdateView):
 class VacationSearch(VacationList):
     def get_queryset(self):
         q = self.kwargs['q']
-        object_list = Vacation.objects.filter(Q(vacation_type__contains=q) | Q(content__contains=q))
+        object_list = Vacation.objects.filter(Q(vacation_type__contains=q) | Q(content__contains=q) | Q(destination__contains=q))
         return object_list
     
     def get_context_data(self, *, object_list=None, **kwargs):
