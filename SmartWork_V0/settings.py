@@ -52,7 +52,8 @@ INSTALLED_APPS = [
 	'MainPages',
     'login',
 	'MessageBoards',
-	'AdminPages'
+	'AdminPages',
+    'vacation'
 
 ]
 
