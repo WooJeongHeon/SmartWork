@@ -32,7 +32,7 @@ class VacationCreate(LoginRequiredMixin, CreateView): # LoginRequiredMixin: 로�
             form.instance.author = current_user
             # form.instance.category = Category.objects.filter(category=None)
             return super(type(self), self).form_valid(form)
-        else: # 로그인 하지 않은 user가 /msgboards/create/ 링크타고 올수 있으니까 예외 처리, 이렇게 들어와서 글쓰기 누르면 에러뜸.
+        else: # 로그인하지 않은 사용자 처리
             return redirect('/')
 	
 

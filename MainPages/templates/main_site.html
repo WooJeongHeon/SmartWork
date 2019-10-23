@@ -1,96 +1,84 @@
-{% extends 'basecamp/base_full.html' %} {% load static %}
-{% block title %}Smart Work{% endblock %}
-
-{% block description %}
-    <meta name="description" content="메인 사이트입니다."> {% endblock %}
-
-{% block content %}
- <!-- Page Content -->
-  <div class="container">
+{% extends 'basecamp/base_full.html' %} {% load static %} {% block title %}Smart Work{% endblock %} {% block description %}
+<meta name="description" content="메인 사이트입니다."> {% endblock %} {% block content %}
+<!-- Page Content -->
+<div class="container">
 
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
-      <h1 class="display-3">Smart Work!</h1>
-      <p class="lead">군부대나 일반 회사에는 대부분 업무 처리를 할 수 있는 인트라넷 시스템들이 갖추어져 있습니다.
-하지만 시스템이 해당 기관의 업무에 특화되어 있지 않은 경우가 많아 협업과 최신화에 어려움이 있으며 중복적으로 업무를 하게 되는 불편함이 생기기도 합니다. 결국 시간과 비용적으로 큰 손해를 보는 결과가 발생하게 됩니다.
-이를 해결하기 위해 공유, 협업, 자동화, 맞춤성과 통합 관리 등을 극대화하여 업무를 간소화할 수 있는 신개념의 스마트 업무 처리 시스템을 기획하였습니다.
-</p>
-      <a href="/about_me" class="btn btn-primary btn-lg">더 알아보기</a>
+        <h1 class="display-3">Smart Work!</h1>
+        <p class="lead">군부대나 일반 회사에는 대부분 업무 처리를 할 수 있는 인트라넷 시스템들이 갖추어져 있습니다. 하지만 시스템이 해당 기관의 업무에 특화되어 있지 않은 경우가 많아 협업과 최신화에 어려움이 있으며 중복적으로 업무를 하게 되는 불편함이 생기기도 합니다. 결국 시간과 비용적으로 큰 손해를 보는 결과가 발생하게 됩니다. 이를 해결하기 위해 공유, 협업, 자동화, 맞춤성과 통합 관리 등을 극대화하여 업무를 간소화할 수 있는 신개념의 스마트 업무 처리 시스템을 기획하였습니다.
+        </p>
+        <a href="/about_me" class="btn btn-primary btn-lg">더 알아보기</a>
     </header>
 
     <!-- Page Features -->
     <div class="row text-center">
 
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">전역일 계산</h4>
-            <p class="card-text">전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">관리자 페이지</h4>
+                    <p class="lead">관라자 페이지에서 상황판 열람, 전체 인원 관리, 휴가 승인등을 할수 있습니다.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="/admin/admin_tools/" class="btn btn-primary">이동하기 >></a>
+                </div>
+            </div>
         </div>
-      </div>
+        
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">출타 관리</h4>
+                    <p class="card-text">휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ </p>
+                </div>
+                <div class="card-footer">
+                    <a href="/vacation/" class="btn btn-primary">출타 신청하기 >></a>
+                </div>
+            </div>
+        </div>
 
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">출타 관리</h4>
-            <p class="card-text">휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ 휴가 가고 싶다~ </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">전역일 계산</h4>
+                    <p class="card-text">전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? 전역 얼마나 남았지? </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">임무 분담제</h4>
-            <p class="card-text">청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">임무 분담제</h4>
+                    <p class="card-text">청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-          <div class="card-body">
-            <h4 class="card-title">근무 관리</h4>
-            <p class="lead">또 당직이야?? 또 당직이야?? 또 당직이야?? 또 당직이야?? 또 당직이야?? 또 당직이야?? 또 당직이야?? 또 당직이야?? 또 당직이야?? 또 당직이야?? 또 당직이야?? </p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
+
 
     </div>
     <!-- /.row -->
-	  
-	  
-	  
-	  
 
-	  
-	  
+</div>
+<!-- /.container -->
 
-  </div>
-  <!-- /.container -->
+<!-- Footer -->
+{% include 'basecamp/footer.html' %}
 
-  <!-- Footer -->
-    {% include 'basecamp/footer.html' %}
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 {% endblock %}
