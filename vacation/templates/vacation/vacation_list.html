@@ -1,6 +1,6 @@
-{% extends 'MessageBoards/base.html' %} {% block content %} {% if user.is_authenticated %}
+{% extends 'vacation/base.html' %} {% block content %} {% if user.is_authenticated %}
 
-<button class="btn btn-primary btn float-right" onclick="location.href='/msgboards/create/'">휴가 신청하기</button>
+<button class="btn btn-primary btn float-right" onclick="location.href='/vacation/create/'">휴가 신청하기</button>
 <button class="mr-1 btn btn-outline-warning btn float-right" onclick="location.href='/admin/admin_tools/'">휴가 관리페이지 >></button>
     {% else %}
 
@@ -26,12 +26,9 @@
 <!-- msgboards Post -->
 <div class="card mb-4" id="post-card-{{ p.pk }}">
 
-    {% if p.head_image %}
-    <img class="card-img-top" src="{{ p.head_image.url }}" alt="Card image cap"> {% endif %}
-
     <div class="card-body">
         <h2 class="card-title">{{ p.vacation_type }}</h2>
-        <h5 class="card-title">{{ p.start_date }}~{{ p.end_date }}</h5>
+        <h5 class="card-title">{{ p.start_date|date:"Y-m-d" }}~{{ p.end_date|date:"Y-m-d" }}</h5>
 
         <p class="card-text">{{ p.content | truncatewords:50}}</p>
 
@@ -41,7 +38,7 @@
         <br/>
         <br/>
 
-        <a href="{{ p.get_absolute_url }}" class="btn btn-primary" id="read-more-post-{{ p.pk }}">Read More &rarr;</a>
+        <a href="{{ p.get_absolute_url }}" class="btn btn-primary" id="read-more-post-{{ p.pk }}">상세보기 &rarr;</a>
         <!-- <button type="button" class="btn btn-link disabled float-right">댓글: </button> -->
     </div>
 

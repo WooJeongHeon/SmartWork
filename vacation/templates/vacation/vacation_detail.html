@@ -1,0 +1,32 @@
+{% extends 'vacation/base.html' %} {% load crispy_forms_tags %} {% block title %}{{ object.title }} - Smart Work{% endblock %} {% block content %}
+<!-- Title -->
+<h2>{{ object.vacation_type }} 신청</h2>
+
+<button type="button" class="btn btn-sm btn-outline-secondary float-right" onclick="location.href='{{ object.get_update_url }}'">EDIT</button>
+<!-- Author -->
+<p class="lead">
+    by
+    <a href="#">{{ object.author.username }}</a>
+</p>
+{% if request.user == object.author %}
+
+{% endif %}
+<hr>
+
+<!-- Date/Time -->
+<p>출타 기간: {{ object.start_date|date:"Y-m-d" }} ~ {{ object.end_date|date:"Y-m-d" }}</p>
+
+<hr>
+
+<!-- Post Content -->
+<p>출타 계획서: </p>
+{{ object.get_markdown_content | safe }}
+<br/> 
+<hr>
+
+<p>작성 일시: {{ object.created }}</p>
+
+{% for tag in object.tags.all %}
+<a href="{{ tag.get_absolute_url }}">#{{ tag }}</a>
+{% endfor %}
+<hr> {% endblock %}

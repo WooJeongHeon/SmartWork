@@ -6,14 +6,14 @@ from markdownx.utils import markdown # markdownx 모듈 사용
 
         
 class Vacation(models.Model):
-    vacation_type = models.CharField(max_length=10) # 출타종류, 길이 제한 10
+    vacation_type = models.CharField("출타 종류", max_length=10) # 출타종류, 길이 제한 10
     # content = models.TextField() # 글에 들어갈 내용
-    content = MarkdownxField() # 마크다운x 모듈 사용함.
+    content = MarkdownxField("출타 계획서") # 마크다운x 모듈 사용함.
 
 
     created = models.DateTimeField(auto_now_add=True) # 언제 작성 되었는지, auto_now_add=True를 넣으면 자동으로 현재 시간 채워짐.
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField()
+    start_date = models.DateTimeField("출발 일자")
+    end_date = models.DateTimeField("도착 일자")
     author = models.ForeignKey(User, on_delete=True) # 어떤 사용자가 사용 했는지, 사용자가 삭제(탈퇴) 됐을때 글도 삭제 = True
 
 

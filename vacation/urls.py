@@ -20,4 +20,8 @@ urlpatterns = [
 
     path('create/', views.VacationCreate.as_view()),
     path('', views.VacationList.as_view()), # 주소 뒤에 아무것도 안오면views.PostList로 가라
+    path('<int:pk>/', views.VacationDetail.as_view()),
+	path('<int:pk>/update/', views.VacationUpdate.as_view()),
+
+
 ]
