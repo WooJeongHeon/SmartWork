@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
-from AdminPages.models import MsgBoards
+from AdminPages.models import UrlCostum
 from MessageBoards.models import Category
 
 
 
 
 def sign_in(request):
-	msgboards = MsgBoards.objects.all()
-	context = {'msgboards':msgboards}
+	urlcostum = UrlCostum.objects.all()
+	context = {'msgboards':urlcostum}
 	context['category_list'] = Category.objects.all()
 	return render(
 		request,
@@ -16,8 +16,8 @@ def sign_in(request):
 	)
 
 def sign_up(request):
-	msgboards = MsgBoards.objects.all()
-	context = {'msgboards':msgboards}
+	urlcostum = UrlCostum.objects.all()
+	context = {'msgboards':urlcostum}
 	context['category_list'] = Category.objects.all()	
 	return render(
 		request,

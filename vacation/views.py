@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Vacation
-from AdminPages.models import MsgBoards
+from AdminPages.models import UrlCostum
 from MessageBoards.models import Category
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -9,12 +9,22 @@ from django.db.models import Q
 class VacationList(ListView):
     model = Vacation
     paginate_by = 5 # 5개 넘어가면 pagination 해라.
+    
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(VacationList, self).get_context_data()
+        context['msgboards'] = UrlCostum.objects.all()
+        return context
 
 
 
     
 class VacationDetail(DetailView):
     model = Vacation
+    
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(VacationDetail, self).get_context_data()
+        context['msgboards'] = UrlCostum.objects.all()
+        return context
 
 
     
@@ -33,7 +43,11 @@ class VacationCreate(LoginRequiredMixin, CreateView): # LoginRequiredMixin: 로�
             return super(type(self), self).form_valid(form)
         else: # 로그인하지 않은 사용자 처리
             return redirect('/')
-
+        
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(VacationCreate, self).get_context_data()
+        context['msgboards'] = UrlCostum.objects.all()
+        return context
 
     
 class VacationUpdate(UpdateView):
@@ -52,6 +66,8 @@ class VacationSearch(VacationList):
         context = super(VacationSearch, self).get_context_data()
         context['search_info'] = 'Search: "{}"'.format(self.kwargs['q']) # post_list.html에서 search_info에 값 넣어줌.
         context['vacation_list'] = Vacation.objects.all()
+        context['msgboards'] = UrlCostum.objects.all()
+
 
         return context
     

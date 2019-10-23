@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
-from AdminPages.models import MsgBoards
+from AdminPages.models import UrlCostum
 from MessageBoards.models import Category
 
 
 def index(request):
-	msgboards = MsgBoards.objects.all()
-	context = {'msgboards':msgboards}
+	urlcostum = UrlCostum.objects.all()
+	context = {'msgboards':urlcostum}
 	context['category_list'] = Category.objects.all()
 
 	return render(
@@ -16,8 +16,8 @@ def index(request):
 
 
 def about_me(request):
-	msgboards = MsgBoards.objects.all()
-	context = {'msgboards':msgboards}
+	urlcostum = UrlCostum.objects.all()
+	context = {'msgboards':urlcostum}
 	context['category_list'] = Category.objects.all()
 
 	return render(
@@ -27,8 +27,8 @@ def about_me(request):
 	)
 
 def schedule(request):
-	msgboards = MsgBoards.objects.all()
-	context = {'msgboards':msgboards}
+	urlcostum = UrlCostum.objects.all()
+	context = {'msgboards':urlcostum}
 	context['category_list'] = Category.objects.all()
 
 	return render(

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Post, Category, Tag, Comment # 현재 경로에서 models 에서 Post, Category, Tag, Comment를 import
-from AdminPages.models import MsgBoards
+from AdminPages.models import UrlCostum
 from MessageBoards.models import Category
 from .forms import CommentForm
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
@@ -18,6 +18,7 @@ class PostList(ListView):
         context['category_list'] = Category.objects.all()
         # .all 은 다가져오는거, .get은 1개만 가져오는거, .filter은 어떤 조건에 만족하는 경우만 가져오는거
         context['posts_without_category'] = Post.objects.filter(category=None).count()
+        context['msgboards'] = UrlCostum.objects.all()
 
         return context
     
@@ -33,6 +34,8 @@ class PostSearch(PostList): # PostList 클래스에서 한가지만 변하기 �
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(PostSearch, self).get_context_data()
         context['search_info'] = 'Search: "{}"'.format(self.kwargs['q']) # post_list.html에서 search_info에 값 넣어줌.
+        context['msgboards'] = UrlCostum.objects.all()
+
         return context
     
     
@@ -46,6 +49,8 @@ class PostDetail(DetailView):
     #         .all 은 다가져오는거, .get은 1개만 가져오는거, .filter은 어떤 조건에 만족하는 경우만 가져오는거
         context['posts_without_category'] = Post.objects.filter(category=None).count()
         context['comment_form'] = CommentForm() # CommentForm()를 html로 넘겨준다.
+        context['msgboards'] = UrlCostum.objects.all()
+
 
         return context
 
@@ -70,6 +75,8 @@ class PostCreate(LoginRequiredMixin, CreateView): # LoginRequiredMixin: 로그�
         context = super(type(self), self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
         context['posts_without_category'] = Post.objects.filter(category=None).count()
+        context['msgboards'] = UrlCostum.objects.all()
+
         return context
     
     
@@ -94,6 +101,8 @@ class PostListByTag(ListView):
         context['posts_without_category'] = Post.objects.filter(category=None).count()
         tag_slug = self.kwargs['slug']
         context['tag'] = Tag.objects.get(slug=tag_slug)
+        context['msgboards'] = UrlCostum.objects.all()
+
 
         return context
 
@@ -115,6 +124,8 @@ class PostListByCategory(ListView):
         context = super(type(self), self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
         context['posts_without_category'] = Post.objects.filter(category=None).count()
+        context['msgboards'] = UrlCostum.objects.all()
+
 
         slug = self.kwargs['slug']
 
@@ -159,6 +170,8 @@ class CommentUpdate(UpdateView):
         context = super(type(self), self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
         context['posts_without_category'] = Post.objects.filter(category=None).count()
+        context['msgboards'] = UrlCostum.objects.all()
+
         return context
     
     

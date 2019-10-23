@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import MsgBoards
+from .models import UrlCostum
 from MessageBoards.models import Category
 from vacation.models import Vacation
 from django.views.generic import ListView
@@ -7,8 +7,8 @@ from django.views.generic import ListView
 
 
 def admin_tools(request):
-	msgboards = MsgBoards.objects.all()
-	context = {'msgboards':msgboards}
+	urlcostum = UrlCostum.objects.all()
+	context = {'msgboards':urlcostum}
 	context['category_list'] = Category.objects.all()
 	context['vacation_list'] = Vacation.objects.all()
 
@@ -20,9 +20,11 @@ def admin_tools(request):
     )
 
 def headcount(request):
-    msgboards = MsgBoards.objects.all()
-    context = {'msgboards':msgboards}
+    urlcostum = UrlCostum.objects.all()
+    context = {'msgboards':urlcostum}
     context['category_list'] = Category.objects.all()
+    context['vacation_list'] = Vacation.objects.all()
+
 
     return render(
         request,
@@ -31,11 +33,12 @@ def headcount(request):
     )
 
 def custom_site(request):
-	msgboards = MsgBoards.objects.all()
-	context = {'msgboards':msgboards}
-	context['category_list'] = Category.objects.all()
-
-	return render(
+    urlcostum = UrlCostum.objects.all()
+    context = {'msgboards':urlcostum}
+    context['category_list'] = Category.objects.all()
+    context['vacation_list'] = Vacation.objects.all()
+    
+    return render(
         request,
         'custom_site.html',
 	    context

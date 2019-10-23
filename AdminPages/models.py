@@ -14,8 +14,24 @@ class MsgBoards(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return '/admin/msgboards/{}/'.format(self.slug)
+        return '/admin/super/msgboards/{}/'.format(self.slug)
 
     class Meta:
         verbose_name_plural = 'MsgBoards'
+        ordering = ['order', ] # order 순으로 오름차순 정렬
+        
+class UrlCostum(models.Model):
+    name = models.CharField(max_length=25, unique=True) # 글자수 제한: 25, 중복 방지
+    url_link = models.TextField(blank=True)
+    order = models.CharField(max_length=25, unique=True)
+    slug = models.SlugField(unique=True, allow_unicode=True) # allow_unicode=True: 한글 가능, 사용자가 게시판 name을 쓰면 자동으로 slug 만들어지게 할거임.(url에 게시판 이름 구성하려고)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return '/admin/super/urlcostum/{}/'.format(self.slug)
+
+    class Meta:
+        verbose_name_plural = 'UrlCostum'
         ordering = ['order', ] # order 순으로 오름차순 정렬

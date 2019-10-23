@@ -66,7 +66,7 @@
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">연계 사이트</a>
                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 48px, 0px);">
                         {% for p in msgboards %}
-                        <a class="dropdown-item" href="#">{{ p.name }}</a>
+                        <a class="dropdown-item" href={{ p.url_link }} onClick="window.open(this.href);return false;">{{ p.name }}</a>
                         {% endfor %}
 
                         <div class="dropdown-divider"></div>
@@ -81,8 +81,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/admin/admin_tools/">관리자 페이지</a>
                 </li>
-
-         
 
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#"> </a>
@@ -107,7 +105,7 @@
                         <span class="caret"></span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="download">
-              
+
                         <a class="dropdown-item" href="/accounts/logout/">Log out</a>
                     </div>
                 </li>

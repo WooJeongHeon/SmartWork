@@ -14,7 +14,7 @@
             </ol>
             {% include './base_menu.html' %}
 
-            <!-- DataTables Example -->
+            <!-- DataTables 부대활동 커스텀 -->
             <div class="card mb-3">
                 <div class="card-header">
                     <i class="fas fa-table"></i>
@@ -62,7 +62,55 @@
                 <a class="btn btn-outline-secondary" href="/admin/super/MessageBoards/category/" role="button">+ 추가하기</a>
                 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
             </div>
-                 
+
+            <!-- DataTables 연계사이트 커스텀 -->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    연계사이트 커스텀</div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>게시판 제목</th>
+                                    <th>url</th>
+
+                                    <th>수정</th>
+
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>게시판 제목</th>
+                                    <th>url</th>
+
+                                    <th>수정</th>
+
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                {% for p in msgboards %}
+
+                                <tr>
+                                    <td>{{ p.name }}</td>
+                                    <td>{{ p.url_link }}</td>
+                                    <th>
+
+                                        <a class="btn btn-outline-warning" href="/admin/super/AdminPages/urlcostum/" role="button">수정하기</a>
+
+                                    </th>
+
+                                </tr>
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <a class="btn btn-outline-secondary" href="/admin/super/MessageBoards/category/" role="button">+ 추가하기</a>
+                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            </div>
 
         </div>
         <!-- /.container-fluid -->
