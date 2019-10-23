@@ -62,13 +62,13 @@
                                 {% if vacation_list.exists %} {% for p in vacation_list %}
 
                                 <tr>
-                                    <td>-</td>
+                                    <td>{{ p.rank }}</td>
                                     <td>{{ p.author }}</td>
-                                    <td>-</td>
+                                    <td>{{ p.start_date|date:"Y-m-d" }}</td>
                                     <td>{{ p.start_date|date:"Y-m-d" }}~{{ p.end_date|date:"Y-m-d" }}</td>
 
                                     <td>{{ p.vacation_type }}</td>
-                                    <td>-</td>
+                                    <td>{{ p.destination }}</td>
                                     <td>
                                         <button type="button" class="btn btn-info disabled">승인 완료</button>
                                     </td>

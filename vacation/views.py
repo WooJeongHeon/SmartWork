@@ -40,7 +40,7 @@ class VacationCreate(LoginRequiredMixin, CreateView): # LoginRequiredMixin: 로�
 class VacationUpdate(UpdateView):
     model = Vacation
     fields = [
-        'vacation_type', 'content', 'start_date', 'end_date' # models.py에서 Vacation class에서 필요한것들만 가져옴, 'fields = __all__'하면 모두 가져오는건데 날짜랑 작성자는 일반 사용자가 수정하면 안되니까 빼고 나머지들만 가져옴.
+        'rank', 'vacation_type', 'content', 'start_date', 'end_date', 'destination'
     ]
 	
 class VacationSearch(VacationList):

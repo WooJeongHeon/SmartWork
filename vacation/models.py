@@ -17,8 +17,9 @@ class Vacation(models.Model):
     author = models.ForeignKey(User, on_delete=True) # 어떤 사용자가 사용 했는지, 사용자가 삭제(탈퇴) 됐을때 글도 삭제 = True
     rank = models.CharField("계급", max_length=10)
     destination = models.CharField("행선지", max_length=10)
-    is_approval = models.CharField("승인 여부", blank=True, null=True, max_length=10)
+    is_approval = models.CharField("승인 여부()", blank=True, null=True, max_length=10)
     days = models.CharField("휴가 일수", blank=True, null=True, max_length=10)
+
 
 
 
