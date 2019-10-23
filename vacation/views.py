@@ -42,4 +42,16 @@ class VacationUpdate(UpdateView):
     fields = [
         'vacation_type', 'content', 'start_date', 'end_date' # models.py에서 Vacation class에서 필요한것들만 가져옴, 'fields = __all__'하면 모두 가져오는건데 날짜랑 작성자는 일반 사용자가 수정하면 안되니까 빼고 나머지들만 가져옴.
     ]
-
+	
+class VacationSearch(VacationList):
+    def get_queryset(self):
+        q = self.kwargs['q']
+        object_list = Vacation.objects.filter(Q(vacation_type__contains=q) | Q(content__contains=q))
+        return object_list
+    
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(VacationSearch, self).get_context_data()
+        context['search_info'] = 'Search: "{}"'.format(self.kwargs['q']) # post_list.html에서 search_info에 값 넣어줌.
+        return context
+    
+    

@@ -2,12 +2,12 @@
 
 <button class="btn btn-primary btn float-right" onclick="location.href='/vacation/create/'">휴가 신청하기</button>
 <button class="mr-1 btn btn-outline-warning btn float-right" onclick="location.href='/admin/admin_tools/'">휴가 관리페이지 >></button>
-    {% else %}
+{% else %}
 
-        <a href="/login/sign_in/" class="text-warning float-right">휴가신청 또는 휴가승인을 위해 로그인이 필요합니다.</a>
-
+<a href="/login/sign_in/" class="text-warning float-right">휴가신청 또는 휴가승인을 위해 로그인이 필요합니다.</a>
 
 {% endif %}
+<br>
 
 <style>
     #content_title {
@@ -16,13 +16,28 @@
     }
 </style>
 
+{% if search_info %}
 <h1 id="blog-list-title">
 
-    <a id="content_title" href="#">휴가 관리</a>
+    <a id="content_title" href="#">{{ search_info }}</a>
 
 </h1>
 
-{% if object_list.exists %} {% for p in object_list %}
+<p class="text-primary float-right">{{ object_list.count }}개의 게시물이 검색되었습니다.</p>
+<br>
+<br> {% else %}
+<h1 id="blog-list-title">
+
+    <a id="content_title" href="#">휴가 관리</a>
+</h1>
+
+<h5 id="blog-list-title">
+
+    <a class="float-right">총 출타 횟수: {{ object_list.count }}</a>
+    <br>
+</h5>
+
+{% endif %} {% if object_list.exists %} {% for p in object_list %}
 <!-- msgboards Post -->
 <div class="card mb-4" id="post-card-{{ p.pk }}">
 
