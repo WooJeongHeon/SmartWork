@@ -43,6 +43,7 @@
 
                                     <th>출타종류</th>
                                     <th>행선지</th>
+                                    <th>출타계획서</th>
                                     <th>휴가 승인</th>
                                 </tr>
                             </thead>
@@ -69,6 +70,12 @@
 
                                     <td>{{ p.vacation_type }}</td>
                                     <td>{{ p.destination }}</td>
+                                    <td>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#VacationPlanModal">
+                                              출타계획서 열람
+                                            </button>
+                                    </td>
+
                                     <td>
                                         <button type="button" class="btn btn-info disabled">승인 완료</button>
                                     </td>
@@ -236,4 +243,24 @@
 <!-- Demo scripts for this page-->
 <script src="{% static 'bootstrap/admin_tools/datatables-demo.js' %}"></script>
 <script src="{% static 'bootstrap/admin_tools/chart-area-demo.js' %}"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="VacationPlanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Please Log in</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+{{ p.vacation_type }}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -6,7 +6,7 @@
 <!-- Author -->
 <p class="lead">
     by
-    <a href="#">{{ object.author.username }}</a>
+    <a href="#">{{ object.rank }} {{ object.author.username }}</a>
 </p>
 {% if request.user == object.author %}
 
@@ -15,6 +15,9 @@
 
 <!-- Date/Time -->
 <p>출타 기간: {{ object.start_date|date:"Y-m-d" }} ~ {{ object.end_date|date:"Y-m-d" }}</p>
+
+<hr>
+<p>행선지: {{ object.destination }}</p>
 
 <hr>
 

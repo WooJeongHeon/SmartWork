@@ -17,7 +17,6 @@ class VacationDetail(DetailView):
     model = Vacation
 
 
-
     
 class VacationCreate(LoginRequiredMixin, CreateView): # LoginRequiredMixin: 로그인한사람만 접속할 수 있게 해줌
     model = Vacation
@@ -34,7 +33,7 @@ class VacationCreate(LoginRequiredMixin, CreateView): # LoginRequiredMixin: 로�
             return super(type(self), self).form_valid(form)
         else: # 로그인하지 않은 사용자 처리
             return redirect('/')
-	
+
 
     
 class VacationUpdate(UpdateView):

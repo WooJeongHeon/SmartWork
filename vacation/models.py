@@ -17,7 +17,7 @@ class Vacation(models.Model):
               ('기타', '기타'),
     )) # 출타종류, 길이 제한 10
     # content = models.TextField() # 글에 들어갈 내용
-    content = MarkdownxField("출타 계획서") # 마크다운x 모듈 사용함.
+    content = MarkdownxField("출타 계획서", help_text='출타계획을 자세히 작성해주세요. (마크다운을 적용한 자동미리보기가 제공됩니다.)') # 마크다운x 모듈 사용함.
 
 
     created = models.DateTimeField(auto_now_add=True) # 언제 작성 되었는지, auto_now_add=True를 넣으면 자동으로 현재 시간 채워짐.
