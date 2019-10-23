@@ -13,8 +13,7 @@
                 </li>
                 <li class="breadcrumb-item active">출타자 관리</li>
             </ol>
-        {% include './base_menu.html' %}
-
+            {% include './base_menu.html' %}
 
             <!-- Area Chart Example-->
             <div class="card mb-3">
@@ -44,7 +43,7 @@
 
                                     <th>출타종류</th>
                                     <th>행선지</th>
-                                    <th>휴가허용</th>
+                                    <th>휴가 승인</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -56,10 +55,29 @@
 
                                     <th>출타종류</th>
                                     <th>행선지</th>
-                                    <th>휴가허용</th>
+                                    <th>휴가 승인</th>
                                 </tr>
                             </tfoot>
                             <tbody>
+                                {% if vacation_list.exists %} {% for p in vacation_list %}
+
+                                <tr>
+                                    <td>-</td>
+                                    <td>{{ p.author }}</td>
+                                    <td>-</td>
+                                    <td>{{ p.start_date|date:"Y-m-d" }}~{{ p.end_date|date:"Y-m-d" }}</td>
+
+                                    <td>{{ p.vacation_type }}</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info disabled">승인 완료</button>
+                                    </td>
+                                </tr>
+
+                                {% endfor %} {% else %}
+                                <td>-- 출타 인원이 없습니다 --</td>
+                                {% endif %}
+
                                 <tr>
                                     <td>상병</td>
                                     <td>우정헌</td>
@@ -183,7 +201,6 @@
                 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
             </div>
 
- 
         </div>
         <!-- /.container-fluid -->
 
