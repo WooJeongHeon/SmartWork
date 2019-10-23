@@ -10,21 +10,18 @@
     <link rel="stylesheet" href="{% static 'BootsWatch/Litera/bootstrap/bootstrap.css' %}" media="screen">
     <link rel="stylesheet" href="{% static 'BootsWatch/Litera/_assets/css/custom.min.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <meta name="naver-site-verification" content="example" /> {% block canonical %} {% endblock %}
-    {% block description %}
+    <meta name="naver-site-verification" content="77f96d4f5a3dfb54bd3bd8e6f269593122e08d78" /> {% block canonical %} {% endblock %} {% block description %}
     <meta name="description" content="스마트 업무처리 시스템 홈페이지입니다."> {% endblock %}
 </head>
 
 <body>
 
-{% include 'basecamp/navbar.html' %}
-	
-	{% block content %} {% endblock %}
+    {% include 'basecamp/navbar.html' %} {% block content %} {% endblock %}
 
-<script src="{% static 'BootsWatch/Litera/_assets/js/jquery.min.js' %}"></script>
-<script src="{% static 'BootsWatch/Litera/_assets/js/popper.min.js' %}"></script>
-<script src="{% static 'BootsWatch/Litera/bootstrap/bootstrap.min.js' %}"></script>
-<script src="{% static 'BootsWatch/Litera/_assets/js/custom.js' %}"></script>
+    <script src="{% static 'BootsWatch/Litera/_assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'BootsWatch/Litera/_assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'BootsWatch/Litera/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'BootsWatch/Litera/_assets/js/custom.js' %}"></script>
 
 </body>
 
