@@ -39,8 +39,8 @@ def schedule(request):
 
 
 
-# def robots(request):
-#     return render(
-#         request,
-#         'robots.txt'
-#     )
+def robots(request):
+    return render(
+        request,
+        'robots/robots.txt'
+    )
