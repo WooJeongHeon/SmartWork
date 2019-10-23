@@ -52,6 +52,8 @@ class VacationSearch(VacationList):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(VacationSearch, self).get_context_data()
         context['search_info'] = 'Search: "{}"'.format(self.kwargs['q']) # post_list.html에서 search_info에 값 넣어줌.
+        context['vacation_list'] = Vacation.objects.all()
+
         return context
     
     

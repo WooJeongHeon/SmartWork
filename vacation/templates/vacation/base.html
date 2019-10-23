@@ -37,12 +37,12 @@
 
                 <!-- Categories Widget -->
                 <div class="card my-4" id="category-card">
-                    <h5 class="card-header">출타 세부 검색</h5>
+                    <h5 class="card-header">출타 종류 선택</h5>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
-                                  {% for p in object_list %}
+                                  {% for p in vacation_list %}
                                     <li>
                                         <a href="/vacation/search/{{ p.vacation_type }}/">{{ p.vacation_type }}</a>
                                     </li>

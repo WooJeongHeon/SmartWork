@@ -6,7 +6,16 @@ from markdownx.utils import markdown # markdownx 모듈 사용
 
         
 class Vacation(models.Model):
-    vacation_type = models.CharField("출타 종류", max_length=10) # 출타종류, 길이 제한 10
+    vacation_type = models.CharField("출타 종류", max_length=10, choices = (
+              ('연가', '연가'),
+              ('포상 휴가', '포상 휴가'),
+              ('위로 휴가', '위로 휴가'),
+              ('공가', '공가'),
+              ('외박', '외박'),
+              ('외출', '외출'),
+              ('면회', '면회'),
+              ('기타', '기타'),
+    )) # 출타종류, 길이 제한 10
     # content = models.TextField() # 글에 들어갈 내용
     content = MarkdownxField("출타 계획서") # 마크다운x 모듈 사용함.
 
