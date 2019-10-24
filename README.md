@@ -21,6 +21,8 @@ smartwork.woojeongheon.com
 ```
 https://drive.google.com/file/d/1pRlh89E7J_gn7mIWNP6epT-0PQc04K0F/view?usp=sharing
 ```
+
+*자세한 개발 과정은 git의 commit 목록을 참고해주세요.*
 ## 개발자 정보(Contact Information)
 * 프로젝트명: 스마트 병영업무시스템
 * 개발자: 상병 우정헌
