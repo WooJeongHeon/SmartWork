@@ -18,7 +18,9 @@ smartwork.woojeongheon.com
 
 
 [프로젝트 소개 영상 보기](https://drive.google.com/file/d/1pRlh89E7J_gn7mIWNP6epT-0PQc04K0F/view?usp=sharing)
-
+```
+https://drive.google.com/file/d/1pRlh89E7J_gn7mIWNP6epT-0PQc04K0F/view?usp=sharing
+```
 ## 개발자 정보(Contact Information)
 * 프로젝트명: 스마트 병영업무시스템
 * 개발자: 상병 우정헌
