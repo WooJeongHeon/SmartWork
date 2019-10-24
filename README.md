@@ -1,15 +1,22 @@
 # SmartWork (스마트 병영업무시스템)
 
-## 개발자 정보
+## 링크 제공
+[스마트 병영업무시스템 사이트 방문하기!!](http://smartwork.woojeongheon.com/)
+
+
+[프로젝트 소개 영상 보기](https://drive.google.com/file/d/1pRlh89E7J_gn7mIWNP6epT-0PQc04K0F/view?usp=sharing)
+
+## 개발자 정보(Contact Information)
 * 프로젝트명: 스마트 병영업무시스템
 * 개발자: 상병 우정헌
 *(진급으로 인해 명단상에는 일병으로 표기될 수 있습니다.)*
 * 팀명: SmartWork
 * 주요내용: 휴가를 등록하면 출타자관리, 인원현황, 부대일정, 근무교체가 자동으로 수행되고 실시간으로 알려주는 업무 서비스, 부대 환경에 특화할 수 있는 커스텀 페이지가 있다.
+* 개발자 이메일: email@woojeongheon.com
 
 ## 설치 안내 (Installation Process)
 
-#### BackEnd (Django 이용)
+### BackEnd (Django 이용)
 Python Package Installer
 ```bash
 $ apt-get install python3-pip
