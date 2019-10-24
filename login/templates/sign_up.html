@@ -54,73 +54,63 @@
             <form class="needs-validation" novalidate>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="firstName">First name</label>
+                        <label for="firstName">계급</label>
                         <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
                         <div class="invalid-feedback">
-                            Valid first name is required.
+                            계급을 입력해주세요
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="lastName">Last name</label>
+                        <label for="lastName">이름</label>
                         <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
                         <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
+                            이름을 입력해주세요. </div>
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="username">Username</label>
+                    <label for="username">보직</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">@</span>
                         </div>
-                        <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        <input type="text" class="form-control" id="username" placeholder="주특기 번호" required>
                         <div class="invalid-feedback" style="width: 100%;">
-                            Your username is required.
-                        </div>
+                            보직을 입력해주세요. </div>
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="email">Email
-                        <span class="text-muted">(Optional)</span>
+                        <span class="text-muted">(선택사항)</span>
                     </label>
-                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <input type="email" class="form-control" id="email" placeholder="admin@woojeongheon.com">
                     <div class="invalid-feedback">
                         Please enter a valid email address for shipping updates.
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="address2">Address
-                        <span class="text-muted">(Optional)</span>
+                    <label for="address2">주소
+                        <span class="text-muted">(선택사항)</span>
                     </label>
-                    <input type="text" class="form-control" id="address" placeholder="Apartment or suite">
+                    <input type="text" class="form-control" id="address" placeholder="집주소 입력">
                 </div>
 
                 <div class="row">
                     <div class="col-md-5 mb-3">
-                        <label for="country">계급</label>
+                        <label for="country">분류</label>
                         <select class="custom-select d-block w-100" id="country" required>
                             <option value="">선택하기</option>
-                            <option>이병</option>
-                            <option>일병</option>
-                            <option>상병</option>
-                            <option>병장</option>
-                            <option>하사</option>
-                            <option>중사</option>
-                            <option>상사</option>
-                            <option>원사</option>
-                            <option>준위</option>
-                            <option>소위</option>
-                            <option>중위</option>
-                            <option>대위</option>
-                            <option>소령</option>
-                            <option>기타..</option>
+                            <option>병</option>
+                            <option>간부</option>
+                            <option>관리자</option>
+                            <option>국직</option>
+                            <option>기타</option>
+                        
                         </select>
                         <div class="invalid-feedback">
-                            계급을 선택해 주세요.
+                            분류를 선택해 주세요.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
@@ -130,7 +120,10 @@
                             <option>육군</option>
                             <option>해군</option>
                             <option>공군</option>
+                            <option>국직</option>
                             <option>군무원</option>
+                            <option>기타</option>
+
                         </select>
                         <div class="invalid-feedback">
                             군대 구분을 선택해 주세요.
@@ -163,17 +156,17 @@
                 <h4 class="mb-3">추가정보</h4>
 
                 <div class="d-block my-3">
-<div class="d-block my-3">
-          <div class="custom-control custom-radio">
-            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
-            <label class="custom-control-label" for="credit">사용자</label>
-          </div>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                            <label class="custom-control-label" for="credit">사용자</label>
+                        </div>
 
-          <div class="custom-control custom-radio">
-            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
-            <label class="custom-control-label" for="paypal">관리자</label>
-          </div>
-        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                            <label class="custom-control-label" for="paypal">관리자</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-3">
