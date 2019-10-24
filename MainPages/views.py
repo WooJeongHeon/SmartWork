@@ -36,6 +36,16 @@ def schedule(request):
 		'schedule.html',
 		context
 	)
+def night_duty(request):
+	urlcostum = UrlCostum.objects.all()
+	context = {'msgboards':urlcostum}
+	context['category_list'] = Category.objects.all()
+
+	return render(
+		request,
+		'night_duty.html',
+		context
+	)
 
 
 

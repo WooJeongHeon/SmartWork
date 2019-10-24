@@ -21,5 +21,7 @@ urlpatterns = [
     path('schedule/', views.schedule),
     path('', views.index),
     path('robots.txt/', views.robots),
+	path('night_duty/', views.night_duty),
+
 
 ]

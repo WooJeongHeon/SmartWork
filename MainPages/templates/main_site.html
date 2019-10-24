@@ -38,7 +38,7 @@
 
             <div class="card h-100">
                 <div class="span4 offset4" style="float: left; text-align: center">
-                    <img width="170px" class="img-fluid" src="{% static 'images/calendarIcon.png' %}" />
+                    <img width="180px" class="img-fluid" src="{% static 'images/soldier-icon-57.png' %}" />
                 </div>
 
                 <div class="card-body">
@@ -54,8 +54,9 @@
         <div class="col-lg-3 col-md-6 mb-4">
             <div class="card h-100">
                 <div class="span4 offset4" style="float: left; text-align: center">
-                    <img width="170px" class="img-fluid" src="{% static 'images/boardIcon.jpg' %}" />
-                </div>                <div class="card-body">
+                    <img width="195px" class="img-fluid" src="{% static 'images/boardIcon.jpg' %}" />
+                </div>
+                <div class="card-body">
                     <h4 class="card-title">부대 활동</h4>
                     <label>관리자는 각 중대 특성에 맞추어 게시판을 추가/변경할 수 있으며 사용자는 글을 쓰거나 댓글을 달수 있습니다. 본문은 마크다운 형식을 지원하며 드래그엔 드롭으로 쉽게 이미지를 업로드할 수 있습니다.</label>
 
@@ -68,13 +69,17 @@
 
         <div class="col-lg-3 col-md-6 mb-4">
             <div class="card h-100">
-                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                <div class="span4 offset4" style="float: left; text-align: center">
+                    <img width="180px" class="img-fluid" src="{% static 'images/calendarIcon.png' %}" />
+                </div>
                 <div class="card-body">
-                    <h4 class="card-title">임무 분담제</h4>
-                    <p class="card-text">청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. 청소구역 바뀌는 날이네.. </p>
+                    <h4 class="card-title">근무 관리</h4>
+                    <label>
+                        휴가 기간에 근무가 걸릴까 걱정되십니까? 근무를 교체하지 못해 난감하나요? 자동으로 해당 월의 근무 표가 업데이트되며 출타 기간과 중복 시 알림으로 알려드립니다. 물론 교체를 원하는 장병끼리 상호 교환 신청도 가능하죠! </label>
+
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Find Out More!</a>
+                    <a href="/night_duty/" class="btn btn-primary">내 근무 보러가기 >></a>
                 </div>
             </div>
         </div>
