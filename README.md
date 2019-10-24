@@ -1,14 +1,28 @@
 # SmartWork (스마트 병영업무시스템)
 
+## 개발자 정보
+* 프로젝트명: 스마트 병영업무시스템
+* 개발자: 상병 우정헌
+* 팀명: SmartWork
+* 주요내용: 휴가를 등록하면 출타자관리, 인원현황, 부대일정, 근무교체가 자동으로 수행되고 실시간으로 알려주는 업무 서비스, 부대 환경에 특화할 수 있는 커스텀 페이지가 있다.
+
 ## 설치 안내 (Installation Process)
 
 #### BackEnd (Django 이용)
+```bash
+$ apt-get install python3-pip
 ```
-apt-get install python3-pip
-pip3 install Django
-pip3 install django-allauth
-pip3 install django-crispy-forms
-pip3 install django-markdownx
+```bash
+$ pip3 install Django
+```
+```bash
+$ pip3 install django-allauth
+```
+```bash
+$ pip3 install django-crispy-forms
+```
+```bash
+$ pip3 install django-markdownx
 ```
 
 
