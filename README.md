@@ -8,7 +8,9 @@ apt-get install python3-pip
 pip3 install Django
 pip3 install django-allauth
 pip3 install django-crispy-forms
-pip3 install django-markdownx```
+pip3 install django-markdownx
+```
+
 
 
 
@@ -22,23 +24,23 @@ pip3 install django-markdownx```
 ## 사용법 (Getting Started)
 가상환경 실행
 ```
-- source venv/bin/activate
+source venv/bin/activate
 ```
 DB 생성
 ```
-- python3 manage.py makemigrations
+python3 manage.py makemigrations
 ```
 DB migrate
 ```
-- python3 manage.py migrate
+python3 manage.py migrate
 ```
 superuser생성 (사이트의 모든 기능 사용가능)
 ```
-- python3 manage.py createsuperuser
+python3 manage.py createsuperuser
 ```
 BackEnd 서버 실행
 ```
-- python3 manage.py runserver --insecure
+python3 manage.py runserver --insecure
 ```
 
 
