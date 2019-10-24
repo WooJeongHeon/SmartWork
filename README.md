@@ -23,24 +23,24 @@ pip3 install django-markdownx
 
 ## 사용법 (Getting Started)
 가상환경 실행
-```
-source venv/bin/activate
+```bash
+$ source venv/bin/activate
 ```
 DB 생성
-```
-python3 manage.py makemigrations
+```bash
+$ python3 manage.py makemigrations
 ```
 DB migrate
-```
-python3 manage.py migrate
+```bash
+$ python3 manage.py migrate
 ```
 superuser생성 (사이트의 모든 기능 사용가능)
-```
-python3 manage.py createsuperuser
+```bash
+$ python3 manage.py createsuperuser
 ```
 BackEnd 서버 실행
-```
-python3 manage.py runserver --insecure
+```bash
+$ python3 manage.py runserver --insecure
 ```
 
 
@@ -72,27 +72,27 @@ python3 manage.py runserver --insecure
 1. 부대 업무
 
 
-- 출타 관리
-- 인원 현황
-- 부대 일정
-- 근무 관리
+	- 출타 관리
+	- 인원 현황
+	- 부대 일정
+	- 근무 관리
 
 
 2. 부대 활동
 
 
-- 공지사항
-- 감사나눔 1·2·3 운동
-- 1·1·30·30 캠페인
-- 부대 밴드
-- 마음의 편지
-- **커스텀 페이지**
+	- 공지사항
+	- 감사나눔 1·2·3 운동
+	- 1·1·30·30 캠페인
+	- 부대 밴드
+	- 마음의 편지
+	- **커스텀 페이지**
 
 
 3. 연계 사이트
 
 
-- 나라사랑 포털
-- 국방부
-- 국방부 오픈소스아카데미
-- **커스텀 페이지**
+	- 나라사랑 포털
+	- 국방부
+	- 국방부 오픈소스아카데미
+	- **커스텀 페이지**
