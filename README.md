@@ -3,11 +3,14 @@
 ## 설치 안내 (Installation Process)
 
 #### BackEnd (Django 이용)
-- apt-get install python3-pip
-- pip3 install Django
-- pip3 install django-allauth
-- pip3 install django-crispy-forms
-- pip3 install django-markdownx
+```
+apt-get install python3-pip
+pip3 install Django
+pip3 install django-allauth
+pip3 install django-crispy-forms
+pip3 install django-markdownx```
+
+
 
 ### 사용 버전 안내
 - Django (2.2.6)
@@ -17,11 +20,27 @@
 
 
 ## 사용법 (Getting Started)
+가상환경 실행
+```
 - source venv/bin/activate
+```
+DB 생성
+```
 - python3 manage.py makemigrations
+```
+DB migrate
+```
 - python3 manage.py migrate
+```
+superuser생성 (사이트의 모든 기능 사용가능)
+```
 - python3 manage.py createsuperuser
+```
+BackEnd 서버 실행
+```
 - python3 manage.py runserver --insecure
+```
+
 
 
 
@@ -57,11 +76,21 @@
 - 근무 관리
 
 
-1. 부대 관리 업무(휴가/출타 관리, 근무관리, 인원 현황, 부대일지)
-2. 부대 활동(공지사항, 감사 나눔 1·2·3 운동, 1·1·30·30 캠페인)
-3. 편의 기능(청소/임무분담제, 출타 행선지 공유, 부대 일정, 전역/진급일 계산)
-4. SNS(부대 밴드, 친구 찾기, 메일/쪽지함, 미니게임)
+2. 부대 활동
 
 
-- 두 번째로는 타 기관 연계사업입니다.
-스마트 국방업무 처리 시스템의 구성과 기능들을 활용하여 다른 유관기관에서도 변형하여 이용할 수 있도록 배포할 것입니다. 해당 기관의 관리자가 권한을 부여받게 되면 관리자 페이지에서 사이트의 UI를 편집하여 재배치하고 필요한 기능들을 추가하고 변경할 수 있게 됩니다. 업무처리 시스템에서 공유경제를 활성화시키는 무한한 능력을 갖게 될 것입니다.
+- 공지사항
+- 감사나눔 1·2·3 운동
+- 1·1·30·30 캠페인
+- 부대 밴드
+- 마음의 편지
+- **커스텀 페이지**
+
+
+3. 연계 사이트
+
+
+- 나라사랑 포털
+- 국방부
+- 국방부 오픈소스아카데미
+- **커스텀 페이지**
