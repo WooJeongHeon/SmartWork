@@ -1,5 +1,30 @@
 # SmartWork (스마트 업무처리 시스템)
 
+## 설치 안내 (Installation Process)
+
+### 사용 버전 안내
+- Django (2.2.6)
+django-allauth (0.40.0)
+django-crispy-forms (1.8.0)
+django-markdownx (2.0.28)
+
+#### BackEnd로 Django 이용
+- apt-get install python3-pip
+- pip3 install Django
+- pip3 install django-allauth
+- pip3 install django-crispy-forms
+- pip3 install django-markdownx
+
+## 사용법 (Getting Started)
+- source venv/bin/activate
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py migrate --run-syncdb
+ python3 manage.py createsuperuser
+- python3 manage.py runserver 0:8000 --insecure
+
+
+
 ## 개발 계획
 1. 게시판 기능 구현하기
 (글쓰기, 수정, 댓글, 카테고리 구성하기)
