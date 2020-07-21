@@ -42,6 +42,17 @@ BackEnd framework
 ```bash
 $ pip3 install Django
 ```
+
+해당 프로그램은 장고가 2.x 버전으로 개발되었습니다.
+django 3.0을 사용하면 on_delete부분에 에러가 발생하는데
+on_delete=models.CASCADE로 변경하면 해결 가능합니다.
+
+
+django 2.2.7 버전 설치
+```bash
+$ pip3 install django==2.2.7
+```
+
 Login module
 ```bash
 $ pip3 install django-allauth
