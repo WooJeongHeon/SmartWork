@@ -34,6 +34,17 @@ https://drive.google.com/file/d/1pRlh89E7J_gn7mIWNP6epT-0PQc04K0F/view?usp=shari
 ## 설치 안내 (Installation Process)
 
 ### BackEnd (Django 이용)
+
+
+다음 명령을 실행하여 모든 패키지를 한 번에 설치할 수 있습니다.
+
+```bash
+pip3 install -r requirements.txt
+```
+
+requirements.txt를 이용해 패키지 설치에 성공하면 아래 패키지는 별도로 설치하지 않아도 됩니다.
+
+
 Python Package Installer
 ```bash
 $ apt-get install python3-pip
