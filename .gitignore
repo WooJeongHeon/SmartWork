@@ -3,3 +3,5 @@
 *.pyc
 
 nohup.out
+
+server_venv/
