@@ -6,3 +6,4 @@ nohup.out
 server_venv/
 
 db.sqlite3
+secrets.json
