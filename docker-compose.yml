@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  smart-work:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000 --insecure
+    volumes:
+      - .:/SmartWork
+    ports:
+      - "8002:8000"
+    restart: unless-stopped
