@@ -9,3 +9,7 @@ services:
     ports:
       - "8002:8000"
     restart: unless-stopped
+    environment:
+      - DJANGO_ALLOWED_HOSTS=${DJANGO_ALLOWED_HOSTS}
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+      - DEBUG=${DEBUG}
