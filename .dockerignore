@@ -1,3 +1,5 @@
-presentaion_data
-
+presentaion_data/
+.idea/
+.venv/
+*.pyc
 Dockerfile
