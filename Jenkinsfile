@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     // 도커 컴포즈 실행
-                    sh 'docker-compose up --build -d'
+                    sh 'docker compose up --build -d'
                 }
             }
         }
